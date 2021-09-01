@@ -80,7 +80,7 @@ dfAeropuerto2.createOrReplaceTempView("aeropuerto2")
 // COMMAND ----------
 
 /*Ejercicio 2
-#Punto 3*/
+#Punto 3 -- no me devuelve nada porque al generar un diccionario me genera las filas como columnas*/
 
 sqlContext.sql(
   "select airline_id, name, alias, iata, icao, callsign, ae1.country, active, ae2.country from aeropuerto1 ae1 inner join aeropuerto2 ae2 where ae1.country = ae2.country").show()
